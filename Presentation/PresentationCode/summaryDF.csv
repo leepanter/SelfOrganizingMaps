@@ -1,0 +1,13 @@
+"","V1","V2","V3"
+"min-SepalLen",4.3,4.9,4.9
+"mean-SepalLen",5.006,5.936,6.588
+"max-SepalLen",5.8,7,7.9
+"min-SepalWid",2.3,2,2.2
+"mean-SepalWid",3.428,2.77,2.974
+"max-SepalWid",4.4,3.4,3.8
+"min-PetalLen",1,3,4.5
+"mean-PetalLen",1.462,4.26,5.552
+"max-PetalLen",1.9,5.1,6.9
+"min-PetalWid",0.1,1,1.4
+"mean-PetalWid",0.246,1.326,2.026
+"max-PetalWid",0.6,1.8,2.5
