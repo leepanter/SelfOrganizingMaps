@@ -1,0 +1,46 @@
+---
+title: "PresentationReferrences"
+output: 
+  pdf_document:
+    df_print: kable
+    includes:
+      in_header: Rmarkdown_preamble.tex
+csl: mathematical-biosciences-and-engineering.csl
+geometry: margin=0.5in
+fontsize: 11pt
+bibliography: BibdotBib.bib
+---
+
+<!------------------------------------------------------------------------------>
+<!--  ####  KNITR Setup & Script Information   #### -->
+<!------------------------------------------------------------------------------>
+
+<!--  ####  KNITR Specs   #### -->
+```{r setup, cache=TRUE, echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(echo=FALSE, 
+                      cache = TRUE, 
+                      fig.align = "center",
+                      fig.width = 5)
+```
+***
+
+
+\cite{belavkin_2020}
+
+\cite{wikipedia_2020}
+
+\cite{Self_Organizing2020}
+
+\cite{asan2012introduction}
+
+\cite{Tanner_2020}
+
+\cite{Wehrens_Maintainer_2019}
+
+\cite{Abhinav_Ralhan_2018}
+
+\cite{Azizah_Suryadi_2019}
+
+\bibliography{BibdotBib}
+
+***

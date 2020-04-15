@@ -86,10 +86,6 @@ dat.in = iris[,-5]
 dat.in=scale(dat.in)
 
 
-# Remove Data-processing variables
-rm(WD)
-
-
 #-------------------------------------------------------------------------#
 ####	Begin Script	 ####
 #-------------------------------------------------------------------------#
@@ -97,7 +93,7 @@ rm(WD)
 ### Unsupervised learning
 
 # Specify Outcome Mapping
-out.grid = somgrid(xdim=4, ydim = 4, topo = "hexagonal")
+out.grid = somgrid(xdim=4, ydim = 4, topo = "rectangular")
 
 
 # Create Clustering
@@ -122,7 +118,7 @@ somOut.16=som.out$unit.classif
 ### Specify Outcome Based Uppon number of Clusters
 # The code below uses a heirarchical clustering algorithm to find three discrete clusters within the output space of the KSOM.  The code will allow us to create a mapping to the output classes defined by the flower types.
 
-hclust(dist(som.out$codes[[1]]))
+plot(hclust(dist(som.out$codes[[1]])))
 class.cuts=cutree(hclust(dist(som.out$codes[[1]])),3)
 plot(som.out, type = 'codes', bgcol = rainbow(3)[class.cuts])
 add.cluster.boundaries(som.out, class.cuts)
@@ -137,19 +133,19 @@ add.cluster.boundaries(som.out, class.cuts)
 somOut=c()
 for(i in 1:150){
   if(somOut.16[i]==1){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==2){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==3){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==4){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==7){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==8){
-    somOut[i]="Vi"
+    somOut[i]="S"
   } else if(somOut.16[i]==5){
-    somOut[i]="Ve"
+    somOut[i]="S"
   } else if(somOut.16[i]==6){
     somOut[i]="Ve"
   } else if(somOut.16[i]==9){
@@ -159,7 +155,7 @@ for(i in 1:150){
   } else if(somOut.16[i]==14){
     somOut[i]="Ve"
   } else {
-    somOut[i]="S"
+    somOut[i]="Vi"
   }
 }
 

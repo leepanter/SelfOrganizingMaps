@@ -6,6 +6,7 @@ output:
     df_print: kable
     includes:
       in_header: Rmarkdown_preamble.tex
+csl: mathematical-biosciences-and-engineering.csl
 geometry: margin=0.5in
 fontsize: 11pt
 bibliography: BibdotBib.bib
