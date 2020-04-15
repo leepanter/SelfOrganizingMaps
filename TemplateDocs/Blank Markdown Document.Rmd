@@ -1,0 +1,95 @@
+---
+title: "Blank Markdown Script"
+author: "Lee Panter"
+output: 
+  pdf_document:
+    df_print: kable
+    includes:
+      in_header: Rmarkdown_preamble.tex
+geometry: margin=0.5in
+fontsize: 11pt
+bibliography: BibdotBib.bib
+---
+
+<!------------------------------------------------------------------------------>
+<!--  ####  KNITR Setup & Script Information   #### -->
+<!------------------------------------------------------------------------------>
+
+<!--  ####  KNITR Specs   #### -->
+```{r setup, cache=TRUE, echo=FALSE, eval=TRUE}
+knitr::opts_chunk$set(echo=FALSE, 
+                      cache = TRUE, 
+                      fig.align = "center",
+                      fig.width = 5)
+```
+***
+
+<!--  ####  Description   #### -->
+\begin{center}
+\LARGE{\underline{\textbf{Description}}}
+\end{center}
+
+
+***
+
+<!--  ####  Script Dependencies   #### -->
+\begin{center}
+\LARGE{\underline{\textbf{Script Dependencies}}}
+\end{center}
+
+
+<!--  Packages -->  
+## Package Dependencies
+
+
+
+<!--  Working Directory  -->       
+## Working Directory
+
+
+
+<!-- Data  &  Variables -->       
+## Load Data
+
+
+***
+<!------------------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------------------>
+<!-- Begin Script -->       
+<!------------------------------------------------------------------------------>
+\begin{center}
+\LARGE{\underline{\textbf{Begin Script}}}
+\end{center}
+
+
+\cite{centers2017new}
+
+\bibliography{BibdotBib}
+
+
+
+
+\begin{center}
+\LARGE{\underline{\textbf{End Script}}}
+\end{center}
+<!------------------------------------------------------------------------------>
+<!-- End Script -->       
+<!------------------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------------------>
+<!-- Post-Script -->       
+<!------------------------------------------------------------------------------>
+
+<!-- Notes:        -->       
+
+<!-- Compilation Errors -->       
+
+<!-- Execution Errors -->
+
+<!-- Next Scripts to Consider -->
+
+<!------------------------------------------------------------------------------>
+
