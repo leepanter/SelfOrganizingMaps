@@ -117,9 +117,9 @@ somOut.16=som.out$unit.classif
 
 ### Specify Outcome Based Uppon number of Clusters
 # The code below uses a heirarchical clustering algorithm to find three discrete clusters within the output space of the KSOM.  The code will allow us to create a mapping to the output classes defined by the flower types.
-
-plot(hclust(dist(som.out$codes[[1]])))
-class.cuts=cutree(hclust(dist(som.out$codes[[1]])),3)
+hclust(dist(som.out$codes))
+plot(hclust(dist(som.out$codes)))
+class.cuts=cutree(hclust(dist(som.out$codes)),3)
 plot(som.out, type = 'codes', bgcol = rainbow(3)[class.cuts])
 add.cluster.boundaries(som.out, class.cuts)
 

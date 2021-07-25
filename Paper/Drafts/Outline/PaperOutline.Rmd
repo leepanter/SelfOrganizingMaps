@@ -163,7 +163,9 @@ this is called the "winning node"
       $$h_{j^{*}}(v, \epsilon(t), \alpha(t)) = exp \left( \frac{-d^{2}(j^{*}, v)}{2\epsilon^{2}(t)} \right) $$ 
       $\forall v \in 1, \ldots,M \times K$
   - Adaptation:
-    - following the calculations of the winner $\mathbf{W}_{j}^*$ and weights $\mathbf{W}_{j}$, and the neighborhood calculations $h_{j^{*}}(j, \epsilon(t), \alpha(t))$ for each value of $j=1, \ldots, M \times K$ for any given iteration value ($t=t_{0}$) the set of weights are updated to reflect the information gained by minimizing the distance (the competition step), using the update formula:
+    - following the calculations of the winner $\mathbf{W}_{j}^*$ and weights $\mathbf{W}_{j}$,
+    
+    and the neighborhood calculations $h_{j^{*}}(j, \epsilon(t), \alpha(t))$ for each value of $j=1, \ldots, M \times K$ for any given iteration value ($t=t_{0}$) the set of weights are updated to reflect the information gained by minimizing the distance (the competition step), using the update formula:
     $$\mathbf{W}_{j}^{t_{1}} = \mathbf{w}_{j}^{t_{0}} + \alpha(t_{0}) *  h_{j^{*}}(j, \epsilon(t_{0}), \alpha(t_{0})) \left [ \mathbf{X}(t_{0})-\mathbf{W}_{j}^{t_{0}}    \right ]$$
 where for discrete time we assume that: $t_{1} = t_{0} + 1$
 
@@ -178,23 +180,22 @@ where for discrete time we assume that: $t_{1} = t_{0} + 1$
   - Clusters in the both the input and output space can be ordered
   - Weight values are bounded 
   - Inputs are given equal weight 
+## What data is required? (quantitative, discrete, distributional assumptions, covariates, etc.)
+  - Covariate types should be considered in close coordination with the metrics chosen for the spaces used to represent input and output space.  
+  - No distributional assumptions need to be made
+  - Missing data is interpreted as a functional part of the distribution (ie relevant information)
   
-## Experimental Design
- 
+## Commonly used pre-fitting or pre-processing steps before the method is applied
+  - All input variables standardized so that each variable has the same influence on the algorithm
+  - number of output nodes chosen to be around 10% of total observations
+
   
 ## Target Population
   
   - Wide range of applications and populations of interest.  Large variety of people who can benefit.  Visualization of high dimensional data is very common, and a useful too.  Non-linear optimization tasks common in location/resource/design allocation problems
  
   
-## What data is required? (quantitative, discrete, distributional assumptions, covariates, etc.)
-  - Covariate types should be considered in close coordination with the metrics chosen for the spaces used to represent input and output space.  
-  - No distributional assumptions need to be made
-  - Missing data is interpreted as a functional part of the distribution (ie relevant information)
 
-## Commonly used pre-fitting or pre-processing steps before the method is applied
-  - All input variables standardized so that each variable has the same influence on the algorithm
-  - number of output nodes chosen to be around 10% of total observations
   
 
 ## When should the method be applied? 
@@ -204,8 +205,6 @@ where for discrete time we assume that: $t_{1} = t_{0} + 1$
 - Unknown or poorly understood predictor variables
 - Observations need to be accurately classified 
 - Artificial Neural Network would be an appropriate method
-
-### How to identify when this method will be useful
 
 
 
